@@ -6,27 +6,7 @@ Tramo::Tramo(){
 }
 
 void Tramo::select_tramo(){
-    /*fstream f;
-    f.open("tramos.txt", fstream::in);
-    if(f.is_open()){
-        char codigoT[MAX], duracionT[MAX], dificultadT[MAX], distanciaT[MAX], tipoT[MAX];
-        while(f.getline(codigoT, MAX, ',')){
-            f.getline(distanciaT, MAX, ',');
-            f.getline(dificultadT, MAX, ',');
-            f.getline(duracionT, MAX, ',');
-            f.getline(tipoT, MAX, '\n');
-            Tramo aux(atoi(codigoT), atoi(duracionT), atoi(dificultadT), atoi(distanciaT), atoi(tipoT));
-            tramo_.push_back(aux);
-        }
-    }   
-    else{
-        cout<<"Error al abrir el fichero"<<endl;
-        exit(EXIT_FAILURE);
-    }
-    list <Tramo>::iterator it;
-    for(it=tramo_.begin();it!=tramo_.end();it++){
-        cout<< it <<" "<<endl;
-    }*/
+    
     cout<<"Actualmente en nuestro parque tenemos los siguientes tramos"<<endl;
     cout<<"Estan ordenados de la siguiente froma:"<<endl;
     cout<<"Codigo del tramo     Distancia del tramo     Difilcultad del tramo     Duracion del tramo      Tipo del tramo"<<endl;
