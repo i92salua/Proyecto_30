@@ -13,16 +13,16 @@ private:
     string nombre_, apellidos_, nombrecompleto_, DNI_, Fech_, REsp_, autori_;
 public:
     Visitante(){
-        string dni_=" ";
-        string nombre_="\0";
-        string apellidos_=" ";
-        int edad=0;
-        string Fech_=" ";
-        string REsp_=" ";
-        string autori_=" ";
-        int tlf_=0;
-        int codigoR_=0;
-        int codigoV_=0
+        dni_=" ";
+        nombre_="\0";
+        apellidos_=" ";
+        edad=0;
+        Fech_=" ";
+        REsp_=" ";
+        autori_=" ";
+        tlf_=0;
+        codigoR_=0;
+        codigoV_=0
     }
     
     inline void setNombre(string nombre){nombre_=nombre;}
