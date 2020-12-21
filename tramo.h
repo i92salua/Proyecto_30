@@ -23,9 +23,8 @@ class Tramo{
         inline int getdistanciaT(){return distanciaT_;}
         inline float tipoT(){return tipoT_;}
         void select_tramo();
-        void ver_tramo();
-        void add_tramo();
-        void delete_tramo();
+        void add_tramo(char *Fname);
+        void delete_tramo(char *Fname);
         int contar(char* nombre);
 };
 #endif

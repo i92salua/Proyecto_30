@@ -4,14 +4,10 @@
 Ruta::Ruta(){
 }
 
-void Ruta::asignaValores(){
-    string Fname;
-    cout<<"Nombre del fichero donde esta la ruta con .txt incluido "<<endl;
-    cin>>Fname;
+void Ruta::asignaValores(char *Fname){
     int contCodi=0, contDuri=0, contDistan=0;
     float  contDifil=0.0, contTipo=0.0;
     int numLineas=contar(Fname);
-    cout<<numLineas<<endl; 
     fstream f;
     f.open(Fname, fstream::in);
     if(f.is_open()){
@@ -26,10 +22,6 @@ void Ruta::asignaValores(){
             f.getline(tipoT, MAX, '\n');
             contTipo=contTipo+atoi(tipoT);
         }
-        /*cout<<contDistan<<endl;
-        cout<<contDifil<<endl;
-        cout<<contDuri<<endl;
-        cout<<contTipo<<endl;*/
         duracionR_=contDuri;
         dificultadR_=contDifil/numLineas;
         distanciaR_=contDistan;

@@ -11,6 +11,10 @@ int main(){
         cout<<"1.-Crear una ruta "<<endl;
         cout<<"2.-Modificar una ruta"<<endl;
         cout<<"3.-Ver datos de la ruta"<<endl;
+        cout<<"4.-"<<endl;
+        cout<<"5.-"<<endl;
+        cout<<"6.-"<<endl;
+        cout<<"7.-"<<endl;
         cin>>op;
         cout<<endl;
         switch(op){
@@ -20,23 +24,30 @@ int main(){
                 cout<<endl;
                 t.select_tramo();
                 cout<<endl;
+                char Fname[255];
+                cout<<endl;
+                cout<<"Nombre del fichero donde esta la ruta con .txt incluido "<<endl;
+                cin>>Fname;
                 cout<<"Vamos a aniadir los tramos"<<endl;
-                t.add_tramo();
+                t.add_tramo(Fname);
             }break;
 
             case 2:{
                 int aux;
-                cout<<"Podemos anidir o eliminar tramos de un ruta"<<endl;
+                char Fname[255];
+                cout<<endl;
+                cout<<"Nombre del fichero donde esta la ruta con .txt incluido "<<endl;
+                cin>>Fname;
                 cout<<endl;
                 cout<<endl;
                 cout<<"Que quieres hacer borrar o aniadir un tramo"<<endl;
                 cout<<"1.- Aniadir          2.-Borrar          3.-Ver los tramos disponibles"<<endl;
                 cin>> aux;
                 if(aux==1){
-                    t.add_tramo();
+                    t.add_tramo(Fname);
                 }
                 else if(aux==2){
-                    t.delete_tramo();
+                    t.delete_tramo(Fname);
                 }
                 else if (aux==3){
                     t.select_tramo();
@@ -49,10 +60,13 @@ int main(){
 
             case 3:{
                 int aux,num=1;
-                r.asignaValores();
+                char Fname[255];
+                cout<<"Nombre del fichero donde esta la ruta con .txt incluido "<<endl;
+                cin>>Fname;
+                r.asignaValores(Fname);
                 do{
                     cout<<"Que quieres ver de la ruta"<<endl;
-                    cout<<"1.- Duracion     2.-Dificultad       3.-Distancia        4.-Tipo de ruta"<<endl;
+                    cout<<"1.- Duracion     2.-Dificultad       3.-Distancia        4.-Tipo de ruta     5.-Salir"<<endl;
                     cin>>aux;
                     switch(aux){
                         case 1:{
@@ -89,12 +103,19 @@ int main(){
                                 cout<<"La ruta se puede hacer toda en bicicleta"<<endl;
                             }
                         }break;
+                        case 5:{
+                            num=0;
+                        }
                         default:{
                             cout<<"Opcion incorrecta"<<endl;
                             num=0;
                         }
                     }
                 }while(num!=0);
+            }
+            default:{
+                cout<<"Saliendo del programa"<<endl;
+                op=0;
             } 
         }
     }while(op!=0);

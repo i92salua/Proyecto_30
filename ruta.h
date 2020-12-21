@@ -22,8 +22,7 @@ class Ruta{
         inline int getParque(){return parque_;}
         inline int tipoR(){return tipoR_;}
         inline void setCodigoR(int codigoR){codigoR_=codigoR;}
-        void asignaValores();
+        void asignaValores(char * Fname);
         int contar(string nombre);
-
 };
 #endif

@@ -6,7 +6,6 @@ Tramo::Tramo(){
 }
 
 void Tramo::select_tramo(){
-    
     cout<<"Actualmente en nuestro parque tenemos los siguientes tramos"<<endl;
     cout<<"Estan ordenados de la siguiente froma:"<<endl;
     cout<<"Codigo del tramo     Distancia del tramo     Difilcultad del tramo     Duracion del tramo      Tipo del tramo"<<endl;
@@ -23,15 +22,10 @@ void Tramo::select_tramo(){
             
 }
 
-void Tramo::add_tramo(){
+void Tramo::add_tramo(char * Fname){
     int cod_T;
-    string name, fname;
-    
-    cout<<"Dime el nombre del ruta que vas a crear"<<endl;
-    cin>>name; 
-    fname=name+".txt";
     ofstream f; 
-    f.open(fname);
+    f.open(Fname, ofstream::app);
     int aux=0, aux1;
     while(aux==0){
         if(f.is_open()){
@@ -72,6 +66,10 @@ void Tramo::add_tramo(){
                 f<<10<<','<<4000<<','<<2<<','<<90<<','<<2<<"\n"; 
             }
         }
+        else{
+            cout<<"Error al abrir el fichero"<<endl;
+            aux++;
+        }
         cout<<"Aniadir mas tramos?"<<endl;
         cout<<"1-Si     2-No"<<endl;
         cin>>aux1;
@@ -83,16 +81,8 @@ void Tramo::add_tramo(){
     f.close();
 }
 
-void Tramo::delete_tramo(){
-    string name, name2;
-    int num,cont;
-    //cout<<"Nombre de la ruta?"<<endl;
-    //cin>>name;
-    //string nombreF=name+".txt";
-    char Fname[MAX];
-    cout<<"Nombre del fichero donde esta la ruta con .txt incluido "<<endl;
-    cin>>Fname;
-    cout<<endl;
+void Tramo::delete_tramo(char *Fname){
+    int num,cont;  
     cout<<"Tu ruta actual tiene estos tramos:"<<endl;
     ifstream f;
     f.open(Fname, fstream::in);
