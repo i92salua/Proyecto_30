@@ -4,6 +4,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <string>
+#include <fstream>
 using namespace std;
 
 class Monitor{
@@ -35,5 +36,9 @@ public:
     inline void setNomina(float nomina){nomina_=nomina;}
     inline float getNomina(){return nomina_;}
     inline string nombrecompleto() const {return apellidos_+","+nombre_;}
-    bool CompruebaDNI(string *n);
-}
+    bool revisor_dni(string &dni);
+    void add_monitor();
+    void del_monitor(char * fdatosm);
+};
+
+#endif
