@@ -29,7 +29,7 @@ void Tramo::add_tramo(char * Fname){
     int aux=0, aux1;
     while(aux==0){
         if(f.is_open()){
-            cout<<"Dime el codigo del tramo al seleccionar"<<endl;
+            cout<<"Dime el codigo del tramo a seleccionar"<<endl;
             cin>>cod_T;
             if(cod_T<1 || cod_T>10){
                 cout<<"Codigo del tramo incorreccto"<<endl;
@@ -70,7 +70,7 @@ void Tramo::add_tramo(char * Fname){
             cout<<"Error al abrir el fichero"<<endl;
             aux++;
         }
-        cout<<"Aniadir mas tramos?"<<endl;
+        cout<<"Añadir mas tramos?"<<endl;
         cout<<"1-Si     2-No"<<endl;
         cin>>aux1;
         if(aux1==2){
@@ -80,6 +80,13 @@ void Tramo::add_tramo(char * Fname){
     cout<<endl;
     f.close();
 }
+
+/*
+La funcion add_tramo() sirve tanto para crear un ruta como para modificarla.
+Le tenemos que pasar el nombre del fichero que queramos desde el main si el nombre no existe creara el fichero y si existe añadira abrira el fichero para poder añadir mas tramos
+Si el fichero se ha abierto correctamente nos dara la opcion a elegir el codigo del tramo que queramos añadir al fichero si el valor introducido no existe nos dara error
+Una vez añadido un tramo nos preguntara si queremos añadir mas si decimos que si volveremos al paso anterior en caso contrario acabara la funcion 
+*/
 
 void Tramo::delete_tramo(char *Fname){
     int num,cont;  
@@ -143,6 +150,13 @@ void Tramo::delete_tramo(char *Fname){
      
 }
 
+/*
+La funcion delete_tramos() elimina el ultimo tramo del fichero que le pasemos por el main
+Nos muestra los tramos que tengamos en el fichero que le pasemos y hay confirmamos si lo queremos eliminar o no
+El programa crea un fichero temporal donde vamos a introducir todos los valores menos el ultimo y despues elimina el fichero original y renombra el fichero temporal con el nombre del anterior fichero
+Nos preguntara si queremos eliminar mas tramos, si respondemos si volveremos al paso anterior, si no acabara la funcion
+*/
+
 int Tramo::contar(char *nombre){
     ifstream f;
     f.open(nombre, fstream::in);
@@ -153,3 +167,7 @@ int Tramo::contar(char *nombre){
     }
     return cont;
 }
+
+/*
+Esta funcion  nos permite contar las lineas de un fichero esto nos sirve para la funcion delete_tramos() ya que necesitamos conocer el numero de lineas de cada fichero 
+*/

@@ -26,9 +26,9 @@ int main(){
                 cout<<endl;
                 char Fname[255];
                 cout<<endl;
-                cout<<"Nombre del fichero donde esta la ruta con .txt incluido "<<endl;
+                cout<<"Nombre del fichero donde creaaras la ruta con .txt incluido "<<endl;
                 cin>>Fname;
-                cout<<"Vamos a aniadir los tramos"<<endl;
+                cout<<"Vamos a añadir los tramos"<<endl;
                 t.add_tramo(Fname);
             }break;
 
@@ -40,8 +40,8 @@ int main(){
                 cin>>Fname;
                 cout<<endl;
                 cout<<endl;
-                cout<<"Que quieres hacer borrar o aniadir un tramo"<<endl;
-                cout<<"1.- Aniadir          2.-Borrar          3.-Ver los tramos disponibles"<<endl;
+                cout<<"Que quieres hacer borrar o añadir un tramo"<<endl;
+                cout<<"1.- Añadir          2.-Borrar          3.-Ver los tramos disponibles"<<endl;
                 cin>> aux;
                 if(aux==1){
                     t.add_tramo(Fname);

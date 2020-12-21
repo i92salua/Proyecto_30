@@ -33,6 +33,13 @@ void Ruta::asignaValores(char *Fname){
     }
 }
 
+/*
+La funcion asignaValores recibe como parametro el nombre del fichero donde estan todos los tramos de las rutas
+El fichero contiene su infromacion de esta forma "codigo del tramo, distancia, difilcultad, tiempo, tipo"
+Esta funcion lee el fichero y va guardando en un contador el valor de cada apartado de la ruta, por ejemplo el segundo numero de nuestro fichero es la distancia,
+la funcion recorre todo el fichero sumando la distancia de cada tramo para despues asignarselo a la variable distanciaR_, ya que la distancia total de la ruta sera la suma de la distancia de todos los tramos
+*/
+
 int Ruta::contar(string nombre){
     ifstream f;
     f.open(nombre, fstream::in);
@@ -43,3 +50,7 @@ int Ruta::contar(string nombre){
     }
     return cont;
 }
+
+/*
+Esta funcion  nos permite contar las lineas de un fichero esto nos sirve para la funcion asignaValores() ya que necesitamos conocer el numero de lineas de cada fichero para poder hacer la media de la difilcultad y el tipo 
+*/
