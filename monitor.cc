@@ -1,8 +1,7 @@
 #include "monitor.h"
 #include <stdio.h>
 
-Monitor::Monitor(string dni, string nombre, string apellidos, int tlf, string direc,
-        string correo, int nss, int horas, int codigoM, float nomina){
+Monitor::Monitor(string dni, string nombre, string apellidos, int tlf, string direc,string correo, int nss, int horas, int codigoM, float nomina){
     setDNI(dni);
 	setNombre(nombre);
 	setApellidos(apellidos);
@@ -13,6 +12,7 @@ Monitor::Monitor(string dni, string nombre, string apellidos, int tlf, string di
     horasT(horas);
     setCodigoM(codigoM);
 	setNomina(nomina);
+	add_monitor();
 }
 
 bool Monitor::revisor_dni(string &dni){
@@ -45,7 +45,7 @@ bool Monitor::revisor_dni(string &dni){
 void Monitor::add_monitor(){
     ofstream f; 
     string fdatosm=DNI_+".txt";
-    f.open(fdatosm, ofstream::app);
+    f.open(fdatosm);
         if(f.is_open()){
                 f<<DNI_<<','<<nombre_<<','<<apellidos_<<','<<tlf_<<','<<direc_<<','<<correo_<<','<<NSS_<<','<<horas_<<','<<codigoM_<<','<<nomina_<<endl; 
         }
