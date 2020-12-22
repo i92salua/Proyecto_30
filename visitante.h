@@ -12,18 +12,7 @@ private:
     int tlf_, codigoR_, codigoV_, edad_;
     string nombre_, apellidos_, nombrecompleto_, DNI_, Fech_, REsp_, autori_;
 public:
-    Visitante(){
-        dni_=" ";
-        nombre_="\0";
-        apellidos_=" ";
-        edad=0;
-        Fech_=" ";
-        REsp_=" ";
-        autori_=" ";
-        tlf_=0;
-        codigoR_=0;
-        codigoV_=0
-    }
+    Visitante(string dni_=" ",string nombre_="\0",string apellidos_=" ",int edad=0,string Fech_=" ",string REsp_=" ",string autori_=" ",int tlf_=0,int codigoR_=0,int codigoV_=0);
     
     inline void setNombre(string nombre){nombre_=nombre;}
     inline string getNombre() const {return nombre_;}
