@@ -1,9 +1,9 @@
 #include "visitante.h"
 #include <stdio.h>
 
-Visitante::Visitante(string dni, string nombre, string apellidos, int edad, string Fech,
-    string REsp, string autori, int tlf, int codigoR, int codigoV){
-    setDNI(dni);
+Visitante::Visitante(string dni, string nombre, string apellidos, int edad, string Fech, string REsp, string autori, int tlf, int codigoR, int codigoV){
+    //setDNI(dni);
+	DNI_=dni;
 	setNombre(nombre);
 	setApellidos(apellidos);
 	setEdad(edad);
@@ -69,4 +69,5 @@ bool Visitante::MayordeEdad(int n){
 		return false;
 		}
 	}
+	return false;
 }

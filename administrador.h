@@ -58,33 +58,19 @@ public:
 
 
 	//METODOS DE LA CLASE ADMINISTRADOR
-	inline bool comprobar_dni(string &dni)
-		string cad="TRWAGMYFPDXBNJZSQVHLCKE";
-	if(dni.size()!=9){
-		return false;
-	}
-	dni[8]=toupper(dni[8]);
-	if(isdigit(dni[8])){
-	return false;
-	}
-	for(int i=0;i<8;i++){
-		if(!isdigit(dni[i])){
-			return false;
-		}
-	}
-	string s;
-		for(int j=0;j<8;j++){
-			s[j]=dni[j];
-		}
-	int numero=stoi(s);
-	int res=numero%23;
-	if(cad[res]==dni[8]){			
-		return true;
-	}
-	else{
+	inline bool setcomprobar_dni(string dni)
+		{
+		if(dni=="")
+		{
 		return false;
 		}
-}	
+		else
+		{
+			dni_=dni;
+			return true;
+		}
+
+		}
 
 		inline bool sethoras(int horas)
 		{

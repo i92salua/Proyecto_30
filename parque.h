@@ -2,7 +2,7 @@
 #define parque_h
 #include <iostream>
 #include <fstream>
-#include<string.h>
+#include<string>
 using namespace std;
 
 class Parque{
@@ -11,13 +11,16 @@ class Parque{
         int extension_;
     public:
         Parque();
-        void ficherito();
-        inline string getParque(){return nombre_;}
+        void crearFichero(char *Fname);
+        void leeFicheros(char *Fname);
+        inline string getNombre(){return nombre_;}
         inline string getProvincia(){return provincia_;}
         inline string getMuncipio(){return municipio_;}
         inline string getFlora(){return flora_;}
         inline string getFauna(){return fauna_;}
         inline string getRelieve(){return relieve_;}
-        inline string getMencioes(){return menciones_;}    
+        inline string getMenciones(){return menciones_;}  
+        inline string getRutas(){return rutas_;}
+        inline int getExtenion(){return extension_;}  
 };
 #endif

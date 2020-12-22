@@ -23,7 +23,7 @@ public:
     inline void setEdad(int edad){edad_=edad;}
     inline int getEdad() const {return edad_;}
     inline void setTlf(int tlf){tlf_=tlf;}
-    inline string setFech(string Fech){Fech_=Fech;}
+    inline void setFech(string Fech){Fech_=Fech;}
     inline void setResp(string REsp){REsp_=REsp;}
     inline void setAuto(string autori){autori_=autori;}
     inline void setRuta(int codigoR){codigoR_=codigoR;}
