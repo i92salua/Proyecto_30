@@ -11,7 +11,7 @@ Reserva::Reserva(string nombreR,int codigoB,int fecha,int hora,int tipoR) {
 
 
 
-void Reserva::buscar_reserva()
+void Reserva::seleccionar_reserva()
 {
 
 string nombrefichero = "reserva.txt";
@@ -64,7 +64,10 @@ string nombrefichero = "reserva.txt";
 	salida << nombre11 << " " << codigo11 << endl;
 
 	salida.close();
-
+	
+}
+void Reserva::buscar_reserva()
+{
 	//LEER DE UN FICHERO
 
 	ifstream entrada(nombrefichero);
@@ -93,6 +96,7 @@ string nombrefichero = "reserva.txt";
 	}
 
 
+
 /*
  La funci�n buscar_reserva() sirve para buscar los codigos y los nombres de las reservas.
  Primeramente, se crea un fichero donde se escribe el codigo de la reserva y el nombre asigando, que va a ser una acotacion del nombre de la persona que lo solicita.
@@ -101,7 +105,7 @@ string nombrefichero = "reserva.txt";
 
 
 
-void Reserva::seleccionar_reserva(char *fichero){
+void Reserva::seleccionar_reserva1(char *fichero){
 
 	    cout<<"Actualmente en nuestro parque tenemos los siguientes reservas solicitudas"<<endl;
 	    cout<<"Estan ordenados de la siguiente froma:"<<endl;
