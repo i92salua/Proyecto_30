@@ -13,19 +13,7 @@ private:
     float nomina_;
     string nombre_, apellidos_, nombrecompleto_, DNI_, direc_, correo_;
 public:
-    Monitor(){
-        DNI_=" "; 
-        nombre_=" ";
-        apellidos_=" ";
-        tlf_=0;
-        direc_=" ";
-        correo_=" ";
-        NSS_=0;
-        horas_=0;
-        codigoM_=0;
-        nomina_=0.0;
-    }
-    
+    Monitor(string dni="", string nombre="", string apellidos="", int tlf=0, string direc="", string correo="", int nss=0, int horas=0, int codigoM=0, float nomina=0);
     inline void setNombre(string nombre){nombre_=nombre;}
     inline string getNombre() const {return nombre_;}
 	inline void setApellidos(string apellidos){apellidos_=apellidos;}
