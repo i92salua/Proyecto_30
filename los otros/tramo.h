@@ -14,6 +14,7 @@ class Tramo{
         float dificultadT_;               //Dificultad de la ruta
         int distanciaT_;                //Distancia de la ruta en metros
         float tipoT_;                     //Tipo del que es la ruta ya se a pie o en bicicleta
+        list <Tramo> tramo_;
     public:
         Tramo();
         inline int getCodigoT(){return codigoT_;}
