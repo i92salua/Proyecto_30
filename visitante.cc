@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 Visitante::Visitante(string dni, string nombre, string apellidos, int edad, string Fech,
-        string REsp, string autori, int tlf, int codigoR, int codigoV){
+    string REsp, string autori, int tlf, int codigoR, int codigoV){
     setDNI(dni);
 	setNombre(nombre);
 	setApellidos(apellidos);
@@ -13,6 +13,7 @@ Visitante::Visitante(string dni, string nombre, string apellidos, int edad, stri
 	setTlf(tlf);
     setRuta(codigoR);
     setCodigo(codigoV);
+	add_visitante();
 }
 
 bool Visitante::revisor_dni(string &dni){
