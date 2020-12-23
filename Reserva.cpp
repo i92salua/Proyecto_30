@@ -69,8 +69,14 @@ void Reserva::seleccionar_reserva(char * fichero)
 void Reserva::buscar_reserva(char * fichero)
 {
 	//LEER DE UN FICHERO
+<<<<<<< HEAD
 
 	ifstream entrada(fichero);
+=======
+	string nombrefichero="reserva.txt";
+		
+	ifstream entrada(nombrefichero);
+>>>>>>> d07d214cc0c28cd88c1d1602d553838c4344961a
 
 	if(!entrada)
 	{
