@@ -38,6 +38,6 @@ TEST(Parque, leeFicheros){
     EXPECT_EQ("La fauna consta de patos y insectos",fauna);
     EXPECT_EQ("Pasa el rio guadalquivir",relieve);
     EXPECT_EQ("Gano el premio de fotografia de 2020",menciones);
-    EXPECT_EQ("EL parque contiene 2 rutas, la ruta de los atos y la ruta del rio",rutas);
+    EXPECT_EQ("EL parque contiene 2 rutas, la ruta de los patos y la ruta del rio",rutas);
     EXPECT_EQ(2000,extension);
 }
