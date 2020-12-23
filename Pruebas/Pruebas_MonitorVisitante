@@ -1,0 +1,22 @@
+#include "gtest/gtest.h"
+#include "visitante.h"
+#include "monitor.h"
+
+TEST(Monitor, revisor_dni){
+    Monitor m;
+    
+    //EXPECT_TRUE(m.setDNI(85856290G));
+    string dni="62190453V";
+    EXPECT_EQ(true, m.revisor_dni(m.setDNI("62190453V")));
+    //EXPECT_FALSE(m.setDNI(85856290H));
+    string dni_="85856290H";
+    EXPECT_EQ(false, m.revisor_dni(m.setDNI("85856290H")));
+}
+
+TEST(Visitante, MayordeEdad){
+  Visitante v("44XX", "Carlos", "Gutierrez", 30, "12/12/2001", "No", "No", 12, 1, 1);
+
+    EXPECT_EQ(true, v.MayordeEdad(v.setEdad(30)));
+    EXPECT_EQ(false, v.MayordeEdad(v.setEdad(5)));
+}
+
