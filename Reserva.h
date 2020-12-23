@@ -62,7 +62,8 @@ public:
 	}
 
 	//METODOS PROPIOS DE LA CLASE RESERVA
-
+	
+	void seleccionar_reserva();
 	void buscar_reserva();
 	inline string getllamada_solicitud()
 	{
@@ -81,7 +82,7 @@ public:
 				return llamada_cambio;
 			}
 
-	void seleccionar_reserva(char *fichero);
+	void seleccionar_reserva1(char *fichero);
 	void confirmar_reserva(char*fichero);
 	void denegar_reserva(char*fichero);
 	void cambiar_reserva(char *fichero);
