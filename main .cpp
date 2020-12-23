@@ -210,7 +210,7 @@ int main(){
                 cout<<"Para buscar una reserva tenemos que seleccionar las reservas hechas "<<endl;
                 cin>>fichero;
                 cout<<endl;
-                s.seleccionar_reserva(fichero);
+                s.seleccionar_reserva1(fichero);
                 cout<<endl;
                 cout<<endl;
                 cout<<"Procedemos a la confirmacion de reservas"<<endl;
@@ -235,7 +235,7 @@ int main(){
                         s.denegar_reserva(fichero);
                     }
                     else if (aux==3){
-                        s.seleccionar_reserva(fichero);
+                        s.seleccionar_reserva1(fichero);
                     }
                 else{
                     cout<<"Valor incorrecto"<<endl;
