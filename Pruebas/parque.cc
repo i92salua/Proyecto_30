@@ -3,7 +3,7 @@
 
 Parque::Parque(){}
 
-void Parque::crearFichero(char *Fname){
+void Parque::crearFichero(string Fname){
     string nombre, provincia, municipio, flora, fauna, relieve, menciones, rutas;
     int extension;
     cout<<"Vamos a introducir los datos del parque"<<endl;
@@ -50,7 +50,7 @@ Esta funcion recoje los valores introducidos por el usuario en un fichero
 El nombre del fichero esta dado en el main
 */
 
-void Parque::leeFicheros(char *Fname){
+void Parque::leeFicheros(string Fname){
     ifstream f;
     f.open(Fname, fstream::in);
     if(f.is_open()){

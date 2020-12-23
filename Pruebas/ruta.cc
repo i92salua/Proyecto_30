@@ -4,8 +4,8 @@
 Ruta::Ruta(){
 }
 
-void Ruta::asignaValores(char *Fname){
-    int contCodi=0, contDuri=0, contDistan=0;
+void Ruta::asignaValores(string Fname){
+    int  contDuri=0, contDistan=0;
     float  contDifil=0.0, contTipo=0.0;
     int numLineas=contar(Fname);
     fstream f;

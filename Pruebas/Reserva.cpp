@@ -11,15 +11,15 @@ Reserva::Reserva(string nombreR,int codigoB,int fecha,int hora,int tipoR) {
 
 
 
-void Reserva::seleccionar_reserva()
+void Reserva::seleccionar_reserva(char * fichero)
 {
 
-string nombrefichero = "reserva.txt";
+//string nombrefichero = "reserva.txt";
 
 
 
 	//Abrimos el fichero en modo escritura (si el fichero no existe lo crea)
-	ofstream salida(nombrefichero);
+	ofstream salida(fichero);
 
 	if(!salida)
 	{
@@ -66,11 +66,11 @@ string nombrefichero = "reserva.txt";
 	salida.close();
 	
 }
-void Reserva::buscar_reserva()
+void Reserva::buscar_reserva(char * fichero)
 {
 	//LEER DE UN FICHERO
 
-	ifstream entrada(nombrefichero);
+	ifstream entrada(fichero);
 
 	if(!entrada)
 	{

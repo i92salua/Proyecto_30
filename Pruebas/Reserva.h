@@ -63,8 +63,8 @@ public:
 
 	//METODOS PROPIOS DE LA CLASE RESERVA
 	
-	void seleccionar_reserva();
-	void buscar_reserva();
+	void seleccionar_reserva(char *fichero);
+	void buscar_reserva(char *fichero);
 	inline string getllamada_solicitud()
 	{
 		string llamada_solicitud= "Mi reserva es" + getNombreR()+ "con codigo de la reserva"+ to_string(getCodigoB());

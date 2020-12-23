@@ -30,7 +30,7 @@ CXXFLAGS += -g -Wall -Wextra -pthread -std=gnu++11
 
 # All tests produced by this Makefile.  Remember to add new tests you
 # created to the list.
-TESTS = prueba_ruta
+TESTS = pruebas_googletest_AlvaroSanchez
 
 # All Google Test headers.  Usually you shouldn't change this
 # definition.
@@ -72,11 +72,14 @@ gtest_main.a : gtest-all.o gtest_main.o
 # gtest_main.a, depending on whether it defines its own main()
 # function.
 
-ruta.o : ruta.cc ruta.h $(GTEST_HEADERS)
-	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c ruta.cc
+ruta.o : ruta.cc ruta.h parque.cc parque.h $(GTEST_HEADERS)
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c ruta.cc parque.cc
 
-ruta_test.o : prueba_ruta.cc ruta.h $(GTEST_HEADERS)
-	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c prueba_ruta.cc
+parque.o : parque.cc parque.h $(GTEST_HEADERS)
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c parque.cc
 
-ruta_test : ruta.o ruta_test.o gtest_main.a
+pruebas_googletest_AlvaroSanchez.o : pruebas_googletest_AlvaroSanchez.cc ruta.h parque.h $(GTEST_HEADERS)
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c pruebas_googletest_AlvaroSanchez.cc
+
+pruebas_googletest_AlvaroSanchez : ruta.o parque.o pruebas_googletest_AlvaroSanchez.o gtest_main.a
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) $^ -o $@

@@ -11,8 +11,8 @@ class Parque{
         int extension_;
     public:
         Parque();
-        void crearFichero(char *Fname);
-        void leeFicheros(char *Fname);
+        void crearFichero(string Fname);
+        void leeFicheros(string Fname);
         inline string getNombre(){return nombre_;}
         inline string getProvincia(){return provincia_;}
         inline string getMuncipio(){return municipio_;}
