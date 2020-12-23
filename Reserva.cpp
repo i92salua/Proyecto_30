@@ -69,7 +69,8 @@ string nombrefichero = "reserva.txt";
 void Reserva::buscar_reserva()
 {
 	//LEER DE UN FICHERO
-
+	string nombrefichero="reserva.txt";
+		
 	ifstream entrada(nombrefichero);
 
 	if(!entrada)
